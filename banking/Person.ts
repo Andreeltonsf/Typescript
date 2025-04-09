@@ -1,6 +1,7 @@
 export class Person {
 	private _firstName: string;
 	private lastName: string;
+	private fullName: string;
 	private birthDate: Date;
 
 	constructor(firstName: string, lastName: string, birthDate: Date) {
