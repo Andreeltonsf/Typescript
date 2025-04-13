@@ -6,13 +6,6 @@ import { Person } from "./banking/Person";
 
 import { SavingsAccount } from "./banking/SavingsAccount";
 
-
-
-
-
-
-
-
 const maria = new Person("Maria", "da Silva", new Date("1999-01-15"));
 
 const mariaSavingsAccount = new SavingsAccount(maria, 100, "123", 2);
@@ -82,3 +75,13 @@ transaction(mariaAccount);
 // // enviar 50 do Lucas para a Maria
 
 // transaction(lucasCurrentAccount, mariaSavingsAccount, 50);
+
+const lucasCreditCard = new CreditCard("555 555", 200);
+
+// enviar 50 do Lucas para a Maria
+
+transaction(lucasCurrentAccount, mariaSavingsAccount, 200);
+
+const payment = new ProcessPayment(lucasCreditCard, 100);
+
+payment.execute();
